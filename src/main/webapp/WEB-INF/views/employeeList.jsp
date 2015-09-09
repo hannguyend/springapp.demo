@@ -12,7 +12,7 @@
 	<center>
 	
 		<c:forEach items = "${employeeList}" var = "employee">
-			${employee.id}, ${employee.lastName}, ${employee.firstName} <br> 
+			${employee.id}, ${employee.lastName}, ${employee.firstName}, ${employee.address}<br> 
 		</c:forEach>
 		
 	</center>
