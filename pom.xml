@@ -38,14 +38,9 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
-		<!--
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId> 
-			<version>1.1.2</version>
-		</dependency>
-		-->
+
+		<!-- <dependency> <groupId>taglibs</groupId> <artifactId>standard</artifactId> 
+			<version>1.1.2</version> </dependency> -->
 
 		<!-- JSTL -->
 		<dependency>
@@ -53,7 +48,12 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.3.3</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>springapp</finalName>

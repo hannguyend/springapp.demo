@@ -30,5 +30,4 @@ public class EmployeeController implements Controller {
 		mv.addObject("employeeList", this.employeeManager.getEmployeeList());
 		return mv;
 	}
-
 }
