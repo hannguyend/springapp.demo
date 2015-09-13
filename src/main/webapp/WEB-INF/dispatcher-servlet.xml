@@ -9,6 +9,39 @@
 
 	<context:component-scan base-package="com.rental.springapp.helloworld.controller" />
 	
+	<bean id = "productManager" class ="com.rental.springapp.helloworld.service.SimpleProductManager">
+	     <property name="products">
+            <list>
+                <ref bean="product1"/>
+                <ref bean="product2"/>
+                <ref bean="product3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="product1" class="com.rental.springapp.helloworld.domain.Product">
+        <property name="description" value="Lamp"/>
+        <property name="price" value="5.75"/>
+    </bean>
+        
+    <bean id="product2" class="com.rental.springapp.helloworld.domain.Product">
+        <property name="description" value="Table"/>
+        <property name="price" value="75.25"/>
+    </bean>
+
+    <bean id="product3" class="com.rental.springapp.helloworld.domain.Product">
+        <property name="description" value="Chair"/>
+        <property name="price" value="22.79"/>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="messages"/>
+    </bean>
+    
+	<bean name = "/inventory" class = "com.rental.springapp.helloworld.controller.InventoryController">
+		<property name = "productManager" ref = "productManager"/>
+	</bean>
+	
 	<bean id = "employeeManager" class = "com.rental.springapp.helloworld.service.EmployeeManager"/>
 	
 	<bean name="/employee" class="com.rental.springapp.helloworld.controller.EmployeeController">
