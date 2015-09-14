@@ -1,24 +1,28 @@
 package com.rental.springapp.helloworld.model;
 
 public class Employee {
-	private String id;
+	private int id;
 	private String lastName;
 	private String firstName;
 	private String address;
 	
-	public Employee(String id, String lastName, String firstName, String address){
+	public Employee(int id, String lastName, String firstName, String address){
 		this.id = id;
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
 	}
 
-	public String getId() {
+	public Employee() {
+		// Constructor 
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setId(int i) {
+		this.id = i;
 	}
 
 	public String getLastName() {
